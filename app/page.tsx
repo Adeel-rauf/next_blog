@@ -3,7 +3,6 @@ import { client, urlFor } from "./lib/sanity";
 import Image from "next/image";
 import { Card, CardContent } from "@/components/ui/card";
 import Link from "next/link";
-import { Button } from "@/components/ui/button";
 import Intro from "@/components/intro";
 import Readmore from "@/components/Readmore";
 
@@ -32,7 +31,7 @@ export default async function page() {
       Our thought shattering blogs</span>
     <div className="mt-5 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 ">
   {data.map((item:dataT,i:number)=>
-    <Card className="px-1 py-1 bg-blue-100/50 dark:bg-black ">
+    <Card key={i} className="px-1 py-1 bg-blue-100/50 dark:bg-black ">
       
       <Image className="dark:backdrop-invert-0 h-[250px] object-cover rounded-lg shadow-sm"
        src={urlFor(item.image).url()} alt={item.title} width={500} height={600} priority/>

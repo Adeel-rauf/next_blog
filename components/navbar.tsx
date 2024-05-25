@@ -4,9 +4,7 @@ import { ModeToggle } from "./modeToggler";
 import {delay, motion} from "framer-motion"
 
 export default function Navbar() {
-   
-    
-    
+ 
     return (
         <>
         <div 
@@ -23,9 +21,9 @@ export default function Navbar() {
            transition={{delay:1.5, duration:1,type:"spring",stiffness:350}}
            whileHover={{scale:1.1}}
             >
-            <Link className={` shadow-blue-500  
+            <Link className=" shadow-blue-500  
            transition duration-150 text-primary 
-           font-bold italic font-serif`} 
+           font-bold italic font-serif" 
             href={"/about"}>About the author</Link>
            </motion.span>
            <ModeToggle/>

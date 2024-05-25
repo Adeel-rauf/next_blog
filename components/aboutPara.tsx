@@ -1,27 +1,7 @@
 "use client"
-import {motion, useScroll} from "framer-motion"
-import { useRef } from "react";
-import {useInView} from "framer-motion"
+import {motion} from "framer-motion"
+
 export default function AboutPara() {
-    const ref = useRef<HTMLDivElement>(null)
-    const inView = useInView(ref)
-    // const {scrollYProgress} = useScroll({
-    //     target:ref,
-    //     offset:["0 1", "1.40 1"]
-    // })
-    // const paraAnimate = {
-    //     initial:{
-    //         x:-20,
-    //         opacity:0
-    //     },
-    //     animate:{
-    //         x:1,
-    //         opacity:1
-            
-    //     },
-    // }
-    
-    
     
     return (
         <motion.div

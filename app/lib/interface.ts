@@ -28,6 +28,7 @@ export interface mainCardProps{
     cs:string
 }
 export interface blogP{
+    key:string
     title:string,
     image:any,
     content:any

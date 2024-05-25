@@ -1,8 +1,7 @@
 import { wBlog } from "@/app/lib/interface";
 import { client, urlFor } from "@/app/lib/sanity";
 import BlogPage from "@/components/blogPage";
-import { PortableText } from "next-sanity";
-import Image from "next/image";
+
 
 export async function getData(slug:any){
 const query = `*[

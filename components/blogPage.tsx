@@ -3,9 +3,10 @@ import { blogP } from "@/app/lib/interface";
 import { PortableText } from "next-sanity";
 import Image from "next/image";
 import {motion} from "framer-motion"
-export default function BlogPage({title,image,content}:blogP) {
+export default function BlogPage({key,title,image,content}:blogP) {
     return (
-        <>
+        
+        <div key={key}>
     <motion.h1 initial={{x:-50,opacity:0}} whileInView={{x:0,opacity:1}} transition={{duration:0.8}}
     className="mt-5 text-2xl sm:text-4xl text-primary font-bold font-sans text-center">{title}</motion.h1>
     <div className="text-center mt-4">
@@ -26,6 +27,6 @@ export default function BlogPage({title,image,content}:blogP) {
     leading-6 mt-10 font-serif text-xl text-justify tracking-wide sm:px-28 ">
     <PortableText  value={content}/>
     </motion.div>
-    </>
+    </div>
     );
 }
