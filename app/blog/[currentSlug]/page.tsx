@@ -3,7 +3,7 @@ import { client, urlFor } from "@/app/lib/sanity";
 import BlogPage from "@/components/blogPage";
 
 
-export async function getData(slug:any){
+export async function getData(slug:string){
 const query = `*[
     _type=="blog" && slug.current=="${slug}"] 
   {
@@ -18,7 +18,7 @@ const query = `*[
   return data;
 }
 
-export default async function page({params}:{params:{currentSlug:string}}) {
+export default async function currentSlugPost({params}:{params:{currentSlug:string}}) {
  const data:wBlog = await getData(params.currentSlug);
  
 return(
