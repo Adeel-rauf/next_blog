@@ -10,7 +10,7 @@ export default function BlogPage({key,title,image,content}:blogP) {
     <motion.h1 initial={{x:-50,opacity:0}} whileInView={{x:0,opacity:1}} transition={{duration:0.8}}
     className="mt-5 text-2xl sm:text-4xl text-primary font-bold font-sans text-center">{title}</motion.h1>
     <div className="text-center mt-4">
-    <motion.span className="text-black text-2xl font-bold font-serif"
+    <motion.span className="text-black text-2xl font-bold font-serif dark:text-white"
     initial={{opacity:0, scale:0.8}} whileInView={{opacity:1,scale:1}} transition={{duration:1,delay:1}}>Author: </motion.span> 
     
     <motion.span initial={{opacity:0, y:-50}} whileInView={{opacity:1,y:1}} transition={{duration:1,delay:1.3}} 
