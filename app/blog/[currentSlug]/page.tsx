@@ -2,7 +2,7 @@ import { wBlog } from "@/app/lib/interface";
 import { client, urlFor } from "@/app/lib/sanity";
 import BlogPage from "@/components/blogPage";
 
-
+export const revalidate = 30; // revalidate at most every 30 seconds
 async function getData(slug:string){
 const query = `*[
     _type=="blog" && slug.current=="${slug}"] 
