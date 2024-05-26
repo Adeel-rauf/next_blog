@@ -6,7 +6,7 @@ import Link from "next/link";
 import Intro from "@/components/intro";
 import Readmore from "@/components/Readmore";
 
-export async function getData(){
+async function getData(){
 const query = `*[
   _type=="blog"] | order(_createdAt desc)
 {
